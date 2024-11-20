@@ -1,0 +1,19 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    position: absolute;
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+  }

@@ -1,0 +1,64 @@
+/* Post container styling for card layout */
+.post {
+  background-color: #ffffff; /* Card background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem; /* Space inside the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for card depth */
+  margin-bottom: 1rem; /* Space between cards */
+  transition: transform 0.1s ease-in-out; /* Smooth hover effect */
+  width: 30vw;;
+}
+
+/* Hover effect for card */
+.post:hover {
+  transform: scale3d(1.01, 1.01, 1); /* Scale up on hover */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  cursor: pointer;
+}
+
+/* Post title styling */
+.post-title {
+  font-size: 1.5rem; /* Larger title */
+  font-weight: bold; /* Bold for emphasis */
+  color: #333333; /* Darker text */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* Post content styling */
+.post-content {
+  font-size: 1rem; /* Standard readable text size */
+  color: #555555; /* Subtle gray color */
+  margin-bottom: 0.5rem; /* Space below content */
+}
+
+/* Subreddit and author information */
+.post-header {
+  display: flex; /* Arrange subreddit and author horizontally */
+  justify-content: space-between; /* Space out the items */
+  font-size: 0.9rem; /* Smaller font size */
+  color: #777777; /* Light gray for secondary info */
+  margin-bottom: 0.5rem; /* Space below header */
+}
+
+.subreddit {
+  font-weight: bold; /* Highlight subreddit */
+  color: #0079d3; /* Reddit's blue color */
+  cursor: pointer; /* Suggest interactivity */
+}
+
+.post-author {
+  color: #999999; /* Light gray for author info */
+}
+
+/* Post footer for timestamp and upvotes */
+.post-footer {
+  display: flex; /* Arrange timestamp and upvotes horizontally */
+  justify-content: space-between; /* Space out the items */
+  font-size: 0.9rem; /* Smaller font size */
+  color: #777777; /* Light gray for secondary info */
+}
+
+.post-upvotes {
+  font-weight: bold; /* Emphasize upvotes */
+  color: #ff4500; /* Reddit's orange color */
+}

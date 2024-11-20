@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4500;
+  /* padding: 0.5rem 1rem; */
+  color: white;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .search-bar {
+    margin-top: 0.5rem;
+    width: 90%;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 10px 10px;
+}
+
+.auth-buttons {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-buttons:hover {
+  background-color: white;
+  color: #ff4500;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logout-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

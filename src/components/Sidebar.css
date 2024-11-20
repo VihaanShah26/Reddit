@@ -1,0 +1,45 @@
+.sidebar {
+    flex: 0 0 250px; /* Fixed width for the sidebar */
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0; /* Remove border radius to align with the edge */
+    color: black;
+    height: 100vh; /* Full height of the viewport */
+    position: relative; /* Stay in place as user scrolls */
+    top: 50px; /* Start from the top of the page */
+    left: 0; /* Align to the left of the screen */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+    margin: 1rem 0;
+    border: 1px solid #333;
+  }
+  
+  /* Adjust layout for main content */
+  .main-content {
+    display: flex;
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 1rem;
+    gap: 1rem;
+    max-width: calc(100% - 250px); /* Ensure content doesn't overlap */
+  }

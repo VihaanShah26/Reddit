@@ -1,0 +1,9 @@
+/* Styling for post list container */
+.post-list {
+  display: flex;
+  flex-direction: column; /* Stack posts vertically */
+  gap: 1rem; /* Space between posts */
+  max-width: 800px; /* Restrict width for better readability */
+  margin: 0 auto; /* Center the list horizontally */
+  padding: 1rem; /* Padding around the list */
+}
