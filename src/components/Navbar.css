@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   z-index: 999;
+  font-family: Arial, sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -32,11 +33,17 @@
   padding: 10px 10px;
 }
 
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
 
 .auth-buttons {
   display: flex;
   gap: 1rem;
   padding: 10px 10px;
+  cursor: pointer;
 }
 
 .auth-buttons {
@@ -49,11 +56,22 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.auth-buttons:hover {
+.auth-buttons a{ 
+  color: white;
+  text-decoration: none;
+}
+/* 
+.auth-buttons:hover{
   background-color: white;
   color: #ff4500;
   cursor: pointer;
-}
+} */
+
+/* .auth-buttons a:hover {
+  background-color: white;
+  color: #ff4500;
+  cursor: pointer;
+} */
 
 p {
   margin: 0;

@@ -3,9 +3,12 @@ import { useAuth } from "../contexts/AuthProvider";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase";
 import './Navbar.css';
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
@@ -27,12 +30,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">Reddit</div>
+      <div className="logo"><a href="/">Reddit</a></div>
       {currentUser ? (
         <div className="logout-wrapper">
           <h4>Welcome, {currentUser.displayName || currentUser.email}</h4>
           <div onClick={handleLogout} className="auth-buttons">
             Log Out
+          </div>
+          <div className="auth-buttons">
+            <a href="/profile">Profile</a>
           </div>
         </div>
       ) : (
