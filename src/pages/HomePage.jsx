@@ -5,6 +5,7 @@ import PostList from '../components/PostList';
 import AddPost from '../components/AddPost';
 import { fetchSubreddits } from '../utilities/firestoreSubreddits';
 import './HomePage.css';
+import { getAuth } from 'firebase/auth';
 
 const HomePage = () => {
   const [subreddits, setSubreddits] = useState([]); // Currently displayed subreddits
@@ -13,7 +14,14 @@ const HomePage = () => {
   const [isSearching, setIsSearching] = useState(false); // Track if user is searching
   const navigate = useNavigate();
 
+  const auth = getAuth();
+  const currentUser = auth.currentUser;
+
   const handleAddPost = () => {
+    if (!currentUser) {
+      alert('You must be signed in to add a post.');
+      return;
+    }
     navigate('/add-post');
   };
 
@@ -50,6 +58,10 @@ const HomePage = () => {
   };
 
   const handleCreateSubreddit = () => {
+    if (!currentUser) {
+      alert('You must be signed in to create a subreddit.');
+      return;
+    }
     navigate('/create-subreddit');
   };
 

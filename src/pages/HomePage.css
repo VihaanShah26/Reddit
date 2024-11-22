@@ -1,51 +1,50 @@
 .home-page {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    color: black;
-    min-height: 100vh;
-  }
-  
-  .main-content {
-    position: absolute;
-    top: 8vh;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    margin: 0 auto;
-    max-width: 100%;
-    padding: 1rem;
-    gap: 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  margin-top: 10vh;
+}
 
-  .create-subreddit-container {
-    text-align: center; /* Center the button horizontally */
-    margin: 1rem 0; /* Add spacing above and below */
-  }
-  
-  .create-subreddit-button {
-    padding: 0.5rem 1rem;
-    background-color: #0079d3; /* Reddit blue */
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .create-subreddit-button:hover {
-    background-color: #005bb5; /* Darker blue on hover */
-  }
+.main-content {
+  display: flex;
+  justify-content: space-between; /* Space between sidebar and post list */
+  align-items: flex-start; /* Align content at the top */
+  margin: 0 auto; /* Center horizontally */
+  max-width: 90%; /* Use most of the screen width */
+  padding: 1rem;
+  gap: 1rem;
+}
 
-  /* Sidebar container */
+.create-subreddit-container {
+  text-align: center; /* Center the button horizontally */
+  margin: 1rem 0; /* Add spacing above and below */
+}
+
+.create-subreddit-button {
+  padding: 0.5rem 1rem;
+  background-color: #0079d3; /* Reddit blue */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-subreddit-button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+/* Sidebar container */
 .sidebar {
   flex: 1;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 45%;
+  max-width: 35%; /* Reduced max-width to allow more space for main content */
 }
 
 /* Sidebar header */
@@ -61,7 +60,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  max-width: 45%;
 }
 
 .sidebar-search-input {
@@ -93,20 +91,6 @@
   background-color: #005bb5;
 }
 
-/* Create subreddit button */
-.create-subreddit-button {
-  padding: 0.5rem 1rem;
-  background-color: #ff4500;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.create-subreddit-button:hover {
-  background-color: #e03d00;
-}
-
 /* Subreddit list */
 .subreddit-list {
   list-style: none;
@@ -120,9 +104,9 @@
   padding-bottom: 0.5rem;
 }
 
-.subreddit-item a{
+.subreddit-item a {
   text-decoration: none;
-  color: #0079d3; 
+  color: #0079d3;
 }
 
 .subreddit-name {

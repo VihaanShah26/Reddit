@@ -4,6 +4,7 @@ import { addDoc, collection, Timestamp, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { getAuth } from "firebase/auth"; // Import Firebase Authentication
 import './AddPost.css'; // Reuse styling similar to CreateSubreddit.css
+import Navbar from "./Navbar";
 
 const AddPost = () => {
   const [title, setTitle] = useState("");
@@ -71,6 +72,7 @@ const AddPost = () => {
 
   return (
     <div className="add-post-page">
+        <Navbar />
       <h2>Add New Post</h2>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit} className="add-post-form">

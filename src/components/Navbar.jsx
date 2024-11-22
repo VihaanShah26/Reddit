@@ -23,6 +23,8 @@ const Navbar = () => {
     try {
       await signInWithPopup(auth, googleProvider);
       console.log("User signed in with Google");
+      // navigate("/");
+      window.location.reload();
     } catch (error) {
       console.error("Error signing in with Google:", error);
     }
